@@ -1,0 +1,26 @@
+# cat=Basic; type=string[aws=AWS SNS|twilio=Twilio]; label=SMS Provider (aws or twilio)
+smsProvider = aws
+
+# cat=Basic; type=string; label=AWS Region (e.g. eu-central-1)
+awsRegion = eu-central-1
+
+# cat=Basic; type=string; label=SMS Sender ID (up to 11 alphanumeric chars, may require AWS approval)
+smsSenderId = TYPO3
+
+# cat=Basic; type=string; label=Twilio Account SID (required for provider=twilio)
+twilioAccountSid = 
+
+# cat=Basic; type=string; label=Twilio Auth Token (required for provider=twilio)
+twilioAuthToken = 
+
+# cat=Basic; type=string; label=Twilio From number (E.164, e.g. +123456789) – or leave empty if using Messaging Service SID
+twilioFrom = 
+
+# cat=Basic; type=string; label=Twilio Messaging Service SID (optional alternative to From)
+twilioMessagingServiceSid = 
+
+# cat=Basic; type=string; label=SMS message template (use %s placeholder for the 6-digit code)
+smsMessage = Ihr Sicherheitscode lautet: %s
+
+# cat=Basic; type=int; label=Max failed attempts until SMS MFA is locked (set between 1 and 10 or set -1 to deactivate)
+maxAttempts = 6

@@ -1,0 +1,44 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<div class="card card-size-small">
+    <div class="card-header">
+        <div class="card-header-body">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <h1 class="card-title h4">SMS MFA</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="post" action="?action=update&amp;provider={providerIdentifier}">
+            <div class="form-group">
+                <label for="phone" class="form-label">
+                    <f:translate key="LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:input.phone.label" />
+                </label>
+                <input type="text" id="phone" class="form-control" name="phone" value="{phone}" />
+                <div class="form-text">
+                    <f:translate key="LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:input.phone.help" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+        <hr />
+        <table class="table">
+            <tbody>
+            <tr>
+                <th><f:translate key="LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:edit.table.lastUsed"/></th>
+                <td>{lastUsed}</td>
+            </tr>
+            <tr>
+                <th><f:translate key="LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:edit.table.lastUpdated"/></th>
+                <td>{updated}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</html>

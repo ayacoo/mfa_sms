@@ -1,0 +1,37 @@
+{
+  "name": "ayacoo/mfa_sms",
+  "type": "typo3-cms-extension",
+  "description": "This extension adds the SMS MFA provider to TYPO3 and sends codes via Amazon SNS.",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "typo3",
+    "sms",
+    "mfa"
+  ],
+  "authors": [
+    {
+      "name": "Ayacoo",
+      "email": "info@ayacoo.de",
+      "role": "Developer"
+    }
+  ],
+  "version": "0.1.0",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.2",
+    "typo3/cms-core": "^13.4",
+    "aws/aws-sdk-php": "^3.300",
+    "twilio/sdk": "^7.15"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ayacoo\\MfaSms\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "mfa_sms"
+    }
+  }
+}

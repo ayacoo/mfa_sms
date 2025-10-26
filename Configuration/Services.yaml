@@ -1,0 +1,26 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Ayacoo\MfaSms\:
+    resource: '../Classes/*'
+    exclude:
+      - '../Classes/Domain/Model/*'
+      - '../Classes/Helper/*'
+
+  Ayacoo\MfaSms\Service\Sms\SmsSenderInterface:
+    factory: ['@Ayacoo\MfaSms\Service\Sms\SmsSenderFactory', 'create']
+
+  Ayacoo\MfaSms\Mfa\SmsProvider:
+    tags:
+      - name: mfa.provider
+        identifier: 'sms'
+        title: 'LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:mfa_sms.title'
+        description: 'LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:mfa_sms.description'
+        setupInstructions: 'LLL:EXT:mfa_sms/Resources/Private/Language/locallang.xlf:mfa_sms.setupInstructions'
+        icon: 'tx-mfa-sms'
+        defaultProviderAllowed: true
+        before: 'recovery-codes'
+        after: 'totp'

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2025-09-06T00:00:00Z">
+    <body>
+      <trans-unit id="mfa_sms.title" resname="mfa_sms.title"><source>SMS authentication code</source></trans-unit>
+      <trans-unit id="mfa_sms.description" resname="mfa_sms.description"><source>Receive a 6-digit security code via SMS to sign in.</source></trans-unit>
+      <trans-unit id="mfa_sms.setupInstructions" resname="mfa_sms.setupInstructions"><source>Enter your mobile number in E.164 format, e.g. +491701234567.</source></trans-unit>
+
+      <trans-unit id="error.phone.empty.title"><source>Phone missing</source></trans-unit>
+      <trans-unit id="error.phone.empty.message"><source>Please provide a mobile number.</source></trans-unit>
+      <trans-unit id="error.phone.notvalid.title"><source>Invalid phone number</source></trans-unit>
+      <trans-unit id="error.phone.notvalid.message"><source>Please use the international E.164 format, e.g. +491701234567.</source></trans-unit>
+      <trans-unit id="error.sms.send.title"><source>SMS not sent</source></trans-unit>
+      <trans-unit id="error.sms.send.message"><source>The SMS could not be sent. Please try again or contact an administrator.</source></trans-unit>
+
+      <trans-unit id="auth.message"><source>We have sent a 6-digit code to your mobile phone.</source></trans-unit>
+      <trans-unit id="auth.resend"><source>Resend code</source></trans-unit>
+      <trans-unit id="auth.locked"><source>Too many failed attempts. Please ask an administrator to unlock.</source></trans-unit>
+      <trans-unit id="auth.authCode.inputLabel"><source>6-digit code</source></trans-unit>
+
+      <trans-unit id="input.phone.label"><source>Mobile number</source></trans-unit>
+      <trans-unit id="input.phone.help"><source>International format, e.g. +491701234567</source></trans-unit>
+      <trans-unit id="edit.table.lastUsed"><source>Last used</source></trans-unit>
+      <trans-unit id="edit.table.lastUsed.default"><source>Never</source></trans-unit>
+      <trans-unit id="edit.table.lastUpdated"><source>Last updated</source></trans-unit>
+      <trans-unit id="auth.resend.button"><source>Resend code</source></trans-unit>
+    </body>
+  </file>
+</xliff>
